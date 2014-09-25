@@ -4,7 +4,7 @@ Standard HTML meta tags
 ``` <title> ```
 -----
 
-While technically not a ```<meta>``` tag it represents the title of the document/page.
+While technically not a ```<meta>``` tag it represents the title of the document/page. The contents of this tag are generally shown as the title in search results (and of course in the user's browser as titles in tabs).
 
 ``` <meta charset="UTF-8"> ```
 ---------
@@ -18,9 +18,11 @@ This tag should be set in the first 512 bytes.
 
 In HTML 4 complete tag was:
 
-```<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">```
+```html
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+```
 
-#### Example of use
+#### Example
 
 ```html
 <meta charset="UTF-8"> <!-- It's only logical -->
@@ -55,6 +57,36 @@ More about this tag:
 
 `<meta name="keywords" content="">`
 ----------
+A meta keywords tag is supposed to be a brief and concise list of the most important themes of your page. The value of implementing this element in the page is highly disputed. [Google doesn't use keywords meta], and still it's a general recommendation not to leave it blank.
+
+[Google doesn't use keywords meta]:http://googlewebmastercentral.blogspot.com/2009/09/google-does-not-use-keywords-meta-tag.html
+
+#### Example
+
+```html
+<meta name="keywords" content="meta,tags,html,meta tags,tags list,list tags,keywords,seo">
+```
 
 `<meta name="robots" content="">`
 ----------
+This attribute, supported by several major search engines, including Google, Yahoo! and Bing, controls whether search engine spiders are allowed to index a page, or not, and whether they should follow links from a page, or not. The attribute can contain one or more comma-separate values. The `noindex` value prevents a page from being indexed, and `nofollow` prevents links from being crawled. Other values recognized by one or more search engines can influence how the engine indexes pages, and how those pages appear on the search results. These include `noarchive`, which instructs a search engine not to store an archived copy of the page, and `nosnippet`, which asks that the search engine not include a snippet from the page along with the page's listing in search results.
+
+Defaults to: `index,follow`
+
+**Values available:**
+ - `none` - Shortcut for `noindex,nofollow`
+ - `index`,`noindex` - Show (or don't) the page in search results
+ - `noimageindex` - Disable image indexing (works with Google)
+ -
+ - `follow`, `nofollow` - Follow (or don't) the links on this page
+ - `archive`, `noarchive` - Disable (or don't) a cached copy of the page
+ - `nocache` - Same as `noarchive`, used by Bing
+ - `nosnippet` - Prevents the search engine from showing the snippet in results.
+ - `noodp` - Blocks search engines from using the description for this page in DMOZ (aka ODP) as the snippet for your page in the search results.
+ - `noydir` - Blocks Yahoo! from using the description for this page in the Yahoo! directory as the snippet for your page in the search results. No other search engines use the Yahoo! directory for this purpose, so they don’t support the tag.
+
+#### Example
+
+```html
+<meta name="robots" content="noindex,nofollow">
+```
