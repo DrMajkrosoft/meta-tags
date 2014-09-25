@@ -57,9 +57,14 @@ More about this tag:
 
 `<meta name="keywords" content="">`
 ----------
-A meta keywords tag is supposed to be a brief and concise list of the most important themes of your page. The value of implementing this element in the page is highly disputed. [Google doesn't use keywords meta], and still it's a general recommendation not to leave it blank.
+A meta keywords tag is supposed to be a brief and concise list of the most important themes of your page. The value of implementing this element in the page is highly disputed.
+
+[Google doesn't use keywords meta], and still it's a general recommendation not to leave it blank. However, it's noted that [Baidu takes keywords in account], so if you have a large visit count from China, think about putting `keywords` to use.
 
 [Google doesn't use keywords meta]:http://googlewebmastercentral.blogspot.com/2009/09/google-does-not-use-keywords-meta-tag.html
+[Baidu takes keywords in account]:http://searchengineland.com/the-b2b-marketers-guide-to-baidu-seo-180658
+
+
 
 #### Example
 
