@@ -113,7 +113,7 @@ A meta keywords tag is supposed to be a brief and concise list of the most impor
 
 Extension tags
 =========
-These tags are extension or unofficial and their usage is no standardized as part of the HTML standard, however some or most of them have been accepted as [MetaExtensions](https://wiki.whatwg.org/wiki/MetaExtensions) by WHATWG.
+These tags are extension or unofficial and their usage is no standardized as part of the HTML standard, however some or most of them have been accepted as [MetaExtensions](https://wiki.whatwg.org/wiki/MetaExtensions) by @whatwg
 
 `<meta name="robots" content="">`
 ----------
