@@ -31,6 +31,7 @@ In HTML 4 complete tag was:
 
 
 More about this tag:
+
  - [MDN: meta#attr-charset] Has recommendations about this tag
  - All [character sets] - IANAs reference list. (*But do use UTF-8*)
 
@@ -166,6 +167,10 @@ or more commonly used:
 ```
 
 Read the CSS Device Adaptation specification to learn more about options and values.
+
+More about this tag:
+
+ - [An introduction to meta viewport and @viewport](https://dev.opera.com/articles/an-introduction-to-meta-viewport-and-viewport/) by @andreasbovens
 
 `<meta name="bitcoin" content="">`
 ---------
