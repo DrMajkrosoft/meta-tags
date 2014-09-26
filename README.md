@@ -82,7 +82,6 @@ Defaults to: `index,follow`
  - `none` - Shortcut for `noindex,nofollow`
  - `index`,`noindex` - Show (or don't) the page in search results
  - `noimageindex` - Disable image indexing (works with Google)
- -
  - `follow`, `nofollow` - Follow (or don't) the links on this page
  - `archive`, `noarchive` - Disable (or don't) a cached copy of the page
  - `nocache` - Same as `noarchive`, used by Bing
@@ -95,3 +94,23 @@ Defaults to: `index,follow`
 ```html
 <meta name="robots" content="noindex,nofollow">
 ```
+
+Extension tags
+=========
+These tags are extension or unofficial and their usage is no standardized as part of the HTML standard, however some or most of them have been accepted as [MetaExtensions](https://wiki.whatwg.org/wiki/MetaExtensions) by WHATWG.
+
+`<meta name="bitcoin" content="">`
+---------
+Allows users to declare their BTC address which can be used when donating to the user. The community suggests using `bitcoin:` BIP-21 URI schema as a better approach.
+
+[FireCoin](http://www.youtube.com/watch?v=E31bcPr2gr8) for Firefox implements this tag.
+
+#### Example
+
+```html
+<meta name="bitcoin" content="1KVmMLp5MHm1R3iM7Kprp1rUShinzLVtrV">
+```
+
+More about this tag:
+
+ - [Bitcoin meta tag](https://jokenetwork.de/faq/bitcoin/) description with links to discussion topics
