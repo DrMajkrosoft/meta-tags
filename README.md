@@ -1,5 +1,6 @@
-Standard HTML meta tags
+Standard meta tags and defined names
 ========
+These tags are W3C standard tags, or as W3C *defined meta names*.
 
 ``` <title> ```
 -----
@@ -55,6 +56,45 @@ More about this tag:
 
 [create good meta descriptions]:https://support.google.com/webmasters/answer/35624?rd=1#1
 
+`<meta name="generator" content="">`
+----------
+The generator meta tag is used to denote software that generated the document. It's usually found in various CMS implementations to display the CMS that runs the website. Most notable user of the generator tag is Wordpress.
+
+#### Example
+
+```html
+<meta name="generator" content="GitHub's Markdown parser">
+```
+`<meta name="application-name" content="">`
+----------
+This value represents the name of the web application. The value must be a short free-form string giving the name of the Web application that the page represents.
+
+If the page is not a Web application, the application-name metadata name must not be used. Translations of the Web application's name may be given, using the lang attribute to specify the language of each name.
+
+There must not be more than one meta element with a given language and with its name attribute set to the value application-name per document.
+
+Microsoft implements it for pinning sites in Internet Explorer and Windows 8+ along with its proprietery tags.
+
+#### Example
+```html
+<meta name="application-name" content="GitHub">
+```
+
+
+
+`<meta name="author" content="">`
+----------
+The author meta tag is a meta tag used to define the author of the content on the web page. This meta tag allows you to credit the writer(s) of the content on the page.
+
+The value of this tag is disputed nowadays. It's recommended to leave this tag out of your page if you have no specific requirement for its occurance.
+
+#### Example
+
+```html
+<meta name="author" content="Marko Kazhich">
+```
+
+
 `<meta name="keywords" content="">`
 ----------
 A meta keywords tag is supposed to be a brief and concise list of the most important themes of your page. The value of implementing this element in the page is highly disputed.
@@ -64,13 +104,15 @@ A meta keywords tag is supposed to be a brief and concise list of the most impor
 [Google doesn't use keywords meta]:http://googlewebmastercentral.blogspot.com/2009/09/google-does-not-use-keywords-meta-tag.html
 [Baidu takes keywords in account]:http://searchengineland.com/the-b2b-marketers-guide-to-baidu-seo-180658
 
-
-
 #### Example
 
 ```html
 <meta name="keywords" content="meta,tags,html,meta tags,tags list,list tags,keywords,seo">
 ```
+
+Extension tags
+=========
+These tags are extension or unofficial and their usage is no standardized as part of the HTML standard, however some or most of them have been accepted as [MetaExtensions](https://wiki.whatwg.org/wiki/MetaExtensions) by WHATWG.
 
 `<meta name="robots" content="">`
 ----------
@@ -95,10 +137,6 @@ Defaults to: `index,follow`
 <meta name="robots" content="noindex,nofollow">
 ```
 
-Extension tags
-=========
-These tags are extension or unofficial and their usage is no standardized as part of the HTML standard, however some or most of them have been accepted as [MetaExtensions](https://wiki.whatwg.org/wiki/MetaExtensions) by WHATWG.
-
 `<meta name="bitcoin" content="">`
 ---------
 Allows users to declare their BTC address which can be used when donating to the user. The community suggests using `bitcoin:` BIP-21 URI schema as a better approach.
@@ -114,3 +152,31 @@ Allows users to declare their BTC address which can be used when donating to the
 More about this tag:
 
  - [Bitcoin meta tag](https://jokenetwork.de/faq/bitcoin/) description with links to discussion topics
+
+## Google specific tags
+Google has a page with a list of [tags they supports](https://support.google.com/webmasters/answer/79812?hl=en) so you can keep your info up to date.
+
+`<meta name="google" content="notranslate">`
+---------
+This meta tag tells Google that you don't want Google Translate to provide a translation for this page.
+
+>When we recognize that the contents of a page are not in the language that the user is likely to want to read, we often provide a link to a translation in the search results. In general, this gives you the chance to provide your unique and compelling content to a much larger group of users. However, there may be situations where this is not desired.
+
+#### Example
+
+```html
+<meta name="google" content="notranslate">
+```
+
+Content attribute in this tag doesn't have other possible values.
+
+`<meta name="googlebot" content="">`
+----------
+Same as `robots` only applies to Googlebot.
+
+### Example
+```html
+<meta name="googlebot" content="noimageindex">
+```
+For content attribute values check `robots` tag.
+## Microsoft specific tags
