@@ -121,6 +121,7 @@ This attribute, supported by several major search engines, including Google, Yah
 Defaults to: `index,follow`
 
 **Values available:**
+
  - `none` - Shortcut for `noindex,nofollow`
  - `index`,`noindex` - Show (or don't) the page in search results
  - `noimageindex` - Disable image indexing (works with Google)
@@ -136,6 +137,35 @@ Defaults to: `index,follow`
 ```html
 <meta name="robots" content="noindex,nofollow">
 ```
+
+`<meta name="viewport" content="">`
+---------
+Provides a way for documents to specify (using markup rather than CSS) the size, zoom factor, and orientation of the viewport that is used as the base for the document's initial containing block.
+
+[CSS Device Adaptation](http://www.w3.org/TR/css-device-adapt/) specification suggest `@viewport` to be used instead of the tag, however, until fully implemented, you should use the meta tag.
+
+**Options available:**
+
+ - `width` - Sets the width of the initial viewport
+ - `height` - Sets the height of the initial viewport
+ - `initial-scale` - Sets the inital zoom (*numeric value*)
+ - `minimum-scale`- Sets the minimum available zoom level
+ - `maximum-scale` - Sets the maximum available zoom level
+ - `user-scalable` - Enable or disable user zooming (*boolean value*)
+
+#### Example
+
+```html
+<meta name="viewport" content="width=480, initial-scale=2.0, user-scalable=1">
+```
+
+or more commonly used:
+
+```html
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+```
+
+Read the CSS Device Adaptation specification to learn more about options and values.
 
 `<meta name="bitcoin" content="">`
 ---------
