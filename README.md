@@ -123,12 +123,12 @@ Defaults to: `index,follow`
 
 **Values available:**
 
- - `none` - Shortcut for `noindex,nofollow`
+ - `none` - Alias for `noindex,nofollow`
  - `index`,`noindex` - Show (or don't) the page in search results
- - `noimageindex` - Disable image indexing (works with Google)
+ - `noimageindex` - Disable image indexing (works with Googlebot)
  - `follow`, `nofollow` - Follow (or don't) the links on this page
  - `archive`, `noarchive` - Disable (or don't) a cached copy of the page
- - `nocache` - Same as `noarchive`, used by Bing
+ - `nocache` - Same as `noarchive` but used by Bing
  - `nosnippet` - Prevents the search engine from showing the snippet in results.
  - `noodp` - Blocks search engines from using the description for this page in DMOZ (aka ODP) as the snippet for your page in the search results.
  - `noydir` - Blocks Yahoo! from using the description for this page in the Yahoo! directory as the snippet for your page in the search results. No other search engines use the Yahoo! directory for this purpose, so they don’t support the tag.
@@ -156,6 +156,7 @@ Provides a way for documents to specify (using markup rather than CSS) the size,
 
 #### Example
 
+Set the width of initial view to 480px, initial zoom to 200% and let user control the scale/zoom.
 ```html
 <meta name="viewport" content="width=480, initial-scale=2.0, user-scalable=1">
 ```
