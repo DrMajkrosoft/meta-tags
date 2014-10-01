@@ -111,6 +111,35 @@ A meta keywords tag is supposed to be a brief and concise list of the most impor
 <meta name="keywords" content="meta,tags,html,meta tags,tags list,list tags,keywords,seo">
 ```
 
+HTTP-Equiv
+=========
+These tags are used to simulate a HTTP response in various ways.
+
+`<meta http-equiv="refresh" content="">`
+--------
+This meta tag is used as a refresh/URL redirection method. It's use is extremely rare nowadays. Use of meta refresh is discouraged by the W3C.
+
+*Note*: I used this meta tag inside an IE conditional comment to redirect users of IE 8 and lower to a lite version of a website. In any case, when thinking about using this, be sure to talk to someone first.
+
+#### Example
+
+```html
+<meta http-equiv="refresh" content="0; url=http://marxo.me">
+```
+Redirects to `http://marxo.me` upon page load.
+
+```html
+<meta http-equiv="refresh" content="10">
+```
+
+Refreshes the current page after 10 seconds.
+
+**More about this tag:**
+
+ - [Meta refresh](http://en.wikipedia.org/wiki/Meta_refresh) on Wikipedia is a great resource
+ - W3C has specification on [http-equiv=refresh](http://www.w3.org/TR/html-markup/meta.http-equiv.refresh.html)
+
+
 Extension tags
 =========
 These tags are extension or unofficial and their usage is no standardized as part of the HTML standard, however some or most of them have been accepted as [MetaExtensions](https://wiki.whatwg.org/wiki/MetaExtensions) by @whatwg
